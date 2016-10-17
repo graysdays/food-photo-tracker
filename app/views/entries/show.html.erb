@@ -1,5 +1,5 @@
-<h3> date: <%= @entry.created_at %> </h3>
-<h3> <%= @entry.name %> </h3>
+<h5> date: <%= @entry.created_at %> </h5>
+<h3><%= @entry.category %>: <%= @entry.name %> </h3>
 <p> description: <%= @entry.description %> </p>
 <p> location: <%= @entry.location %> </p>
 <p> <%= link_to "Back to Food Diary", entries_path %> | <%= link_to "Edit", edit_entry_path(@entry) %> </p>

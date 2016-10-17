@@ -1,11 +1,13 @@
 <%= form_for(@entry) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <%= f.label :location %>
-  <%= f.text_field :location %>
-  <%= f.submit %>
+<%= f.select(:category, options_for_select([['Breakfast', 'Breakfast'], ['Lunch', 'Lunch'], ['Dinner', 'Dinner'], ['Dessert', 'Dessert'], ['Snack', 'Snack'],['Drink', 'Drink']])) %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :description %>
+<%= f.text_field :description %>
+<%= f.label :location %>
+<%= f.text_field :location %>
+<%= f.submit %>
 <% end %>
 
 <p><%= link_to "Return to Meal Diary", entries_path %></p>
+
